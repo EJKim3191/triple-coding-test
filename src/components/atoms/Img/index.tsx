@@ -1,7 +1,9 @@
 import React from 'react';
 import * as Styled from './style'
 export interface Props {
+  // img alt
   alt: string;
+  // img src
   src: string;
 }
 
