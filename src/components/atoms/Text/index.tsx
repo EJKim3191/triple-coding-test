@@ -4,11 +4,11 @@ export interface Props {
     // 글 내용
     content: string,
     // 글씨 볼드
-    strong: boolean,
+    bold: boolean,
 }
 
-function Text({ content, strong }: Props): React.ReactElement {
-    return <Styled.Text strong={strong}>{content}</Styled.Text>;
+function Text({ content, bold }: Props): React.ReactElement {
+    return <Styled.Text bold={bold}>{content}</Styled.Text>;
 }
 
 export default Text;
