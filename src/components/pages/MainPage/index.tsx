@@ -1,9 +1,11 @@
 import React from 'react';
 import MainTemplate from '../../templates/MainTemplate';
 
-interface Props {}
+import { useScrollY } from '../../../hooks/useScrollY';
 
-const MainPage: React.FC = (props: Props) => {
+const MainPage: React.FC = () => {
+	const scrollY = useScrollY();
+	console.log(scrollY);
 	return <MainTemplate />
 }
 
