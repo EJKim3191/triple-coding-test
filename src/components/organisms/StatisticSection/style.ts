@@ -1,5 +1,17 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import triple2x from '../../../assets/img/triple2x.png';
+
+const SmoothAppearFromBottom = keyframes`
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+`
+
 
 export const ResponsiveSection = styled.div`
     @media screen and (min-width: 1142px) {
@@ -26,5 +38,6 @@ export const ContentLogo = styled.div`
     text-align: center;
     font-family: sans-serif;
     color: rgba(58, 58, 58, 0.7);
+    animation: ${SmoothAppearFromBottom} 0.7s;
 `
 

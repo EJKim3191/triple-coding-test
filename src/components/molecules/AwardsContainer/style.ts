@@ -1,12 +1,25 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import playstore2x from '../../../assets/img/play-store2x.png';
 import badgeapple4x from '../../../assets/img/badge-apple4x.png';
+
+const SmoothAppearFromBottom = keyframes`
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+`
 
 export const AwardsContainer = styled.div`
     @media screen and (min-width: 1142px) {
         margin: 50px 0px 140px 623px;
     }
     white-space: nowrap;
+    animation: ${SmoothAppearFromBottom} 0.7s;
+    animation-delay: 0.2s;
 `;
 
 export const AwardsItem = styled.div<{ bgImg : string }>`
