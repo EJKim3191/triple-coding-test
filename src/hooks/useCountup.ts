@@ -19,6 +19,9 @@ import { useEffect, useState } from 'react';
  * 
  * 오차범위: 최대 -5ms (숫자 800까지 테스트, 컴퓨터 성능에 상이 할 수 있음)
 */
+let speed: number;
+let countByone: boolean = false;
+let timer: number;
 
 const useCountup = (startNum: number, targetNum: number, totalTime: number) => {
     const totalNumber = targetNum - startNum;
@@ -26,13 +29,9 @@ const useCountup = (startNum: number, targetNum: number, totalTime: number) => {
     const [temp, setTemp] = useState(0);
 
     useEffect(()=>{
-        if(countUp >= targetNum) {
-            console.log(temp);
-            return
-        };
+        if(countUp >= targetNum) return() => clearTimeout(timer);
 
-        let speed: number;
-        let countByone: boolean = false;
+
         if((countUp-startNum)/totalNumber < 28/40){
             speed = 4*(200/totalNumber)*(totalTime/2000);
         }
@@ -47,8 +46,12 @@ const useCountup = (startNum: number, targetNum: number, totalTime: number) => {
             speed = 102*(200/totalNumber)*(totalTime/2000);
             countByone = true;
         }
-        if(countByone) setTimeout(() => setCountUp(prevCounter => prevCounter + 1), speed);
-        else setTimeout(() => setCountUp(prevCounter => prevCounter + 2), speed);
+        if(countByone) {
+            timer = setTimeout(() => setCountUp(prevCounter => prevCounter + 1), speed);
+        }
+        else {
+            timer = setTimeout(() => setCountUp(prevCounter => prevCounter + 2), speed)
+        };
         setTemp(temp+speed);
     },[countUp])
 
