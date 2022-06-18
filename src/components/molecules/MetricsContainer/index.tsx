@@ -21,21 +21,21 @@ function MetricsContainer({ count }: Props): React.ReactElement {
     const planCount = useCountup(0, count.planCount, 2000);
     return (
         <Styled.MetricsContainer>
-            <div>
+            <Styled.MetricsItem>
                 <Text content={travelerCount.toString()} bold={true} />
                 <Text content='만 명' bold={true} />
                 <Text content='의 여행자' bold={false} /> 
-            </div>
-            <div>
+            </Styled.MetricsItem>
+            <Styled.MetricsItem>
                 <Text content={reviewCount.toString()} bold={true} /> 
                 <Text content='만 개' bold={true} /> 
                 <Text content='의 여행 리뷰' bold={false} /> 
-            </div>
-            <div>
+            </Styled.MetricsItem>
+            <Styled.MetricsItem>
                 <Text content={planCount.toString()} bold={true} /> 
                 <Text content='만 개' bold={true} /> 
                 <Text content='의 여행 일정' bold={false} /> 
-            </div>
+            </Styled.MetricsItem>
         </Styled.MetricsContainer>
     );
 }

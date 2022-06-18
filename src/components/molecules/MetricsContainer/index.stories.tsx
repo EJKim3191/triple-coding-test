@@ -3,7 +3,7 @@ import MetricsContainer from '.';
 
 
 export default {
-    title: 'Atoms / MetricsContainer',
+    title: 'Molecules / MetricsContainer',
 };
 
 export const MetricsContainerExample: React.FC = () => (
