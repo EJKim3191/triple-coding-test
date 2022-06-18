@@ -28,4 +28,16 @@ export const MetricsItem = styled.div`
     }   
     color: rgb(58, 58, 58);
     font-family: sans-serif;
+    height: 36px;
+`
+
+export const CountingItem = styled.div`
+    position: absolute;
+    display: inline-block;
+`
+
+export const CountingItemContent = styled.div`
+    position: absolute;
+    display: inline-block;
+    margin-left: 65px;
 `

@@ -22,19 +22,31 @@ function MetricsContainer({ count }: Props): React.ReactElement {
     return (
         <Styled.MetricsContainer>
             <Styled.MetricsItem>
-                <Text content={travelerCount.toString()} bold={true} />
-                <Text content='만 명' bold={true} />
-                <Text content='의 여행자' bold={false} /> 
+                <Styled.CountingItem>
+                    <Text content={travelerCount.toString()} bold={true} />
+                </Styled.CountingItem>
+                <Styled.CountingItemContent>
+                    <Text content='만 명' bold={true} />
+                    <Text content='의 여행자' bold={false} /> 
+                </Styled.CountingItemContent>
             </Styled.MetricsItem>
             <Styled.MetricsItem>
-                <Text content={reviewCount.toString()} bold={true} /> 
-                <Text content='만 개' bold={true} /> 
-                <Text content='의 여행 리뷰' bold={false} /> 
+                <Styled.CountingItem>
+                    <Text content={reviewCount.toString()} bold={true} /> 
+                </Styled.CountingItem>
+                <Styled.CountingItemContent>
+                    <Text content='만 개' bold={true} /> 
+                    <Text content='의 여행 리뷰' bold={false} /> 
+                </Styled.CountingItemContent>
             </Styled.MetricsItem>
             <Styled.MetricsItem>
-                <Text content={planCount.toString()} bold={true} /> 
-                <Text content='만 개' bold={true} /> 
-                <Text content='의 여행 일정' bold={false} /> 
+                <Styled.CountingItem>
+                    <Text content={planCount.toString()} bold={true} /> 
+                </Styled.CountingItem>
+                <Styled.CountingItemContent>
+                    <Text content='만 개' bold={true} /> 
+                    <Text content='의 여행 일정' bold={false} /> 
+                </Styled.CountingItemContent>
             </Styled.MetricsItem>
         </Styled.MetricsContainer>
     );
