@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Styled from './style'
-export interface Props {
+interface Props {
     // 글 내용
     content: string,
     // 글씨 볼드
