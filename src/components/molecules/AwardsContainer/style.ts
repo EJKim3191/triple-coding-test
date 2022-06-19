@@ -14,12 +14,14 @@ const SmoothAppearFromBottom = keyframes`
 `
 
 export const AwardsContainer = styled.div`
+    opacity: 0;
     @media screen and (min-width: 1142px) {
         margin: 50px 0px 140px 623px;
     }
     white-space: nowrap;
     animation: ${SmoothAppearFromBottom} 0.7s;
     animation-delay: 0.2s;
+    animation-fill-mode: forwards;
 `;
 
 export const AwardsItem = styled.div<{ bgImg : string }>`

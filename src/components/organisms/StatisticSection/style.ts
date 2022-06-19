@@ -12,7 +12,6 @@ const SmoothAppearFromBottom = keyframes`
     }
 `
 
-
 export const ResponsiveSection = styled.div`
     @media screen and (min-width: 1142px) {
         width: 1040px;
@@ -39,5 +38,5 @@ export const ContentLogo = styled.div`
     font-family: sans-serif;
     color: rgba(58, 58, 58, 0.7);
     animation: ${SmoothAppearFromBottom} 0.7s;
-`
 
+`

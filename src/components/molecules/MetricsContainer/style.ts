@@ -12,12 +12,14 @@ const SmoothAppearFromBottom = keyframes`
 `
 
 export const MetricsContainer = styled.div`
+    opacity: 0;
     @media screen and (min-width: 1142px) {
         margin-left: 623px;
         padding-top: 150px;
     }
     animation: ${SmoothAppearFromBottom} 0.7s;
     animation-delay: 0.1s;
+    animation-fill-mode: forwards;
 `
 
 export const MetricsItem = styled.div`
