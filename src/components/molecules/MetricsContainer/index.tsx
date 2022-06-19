@@ -6,6 +6,8 @@ import { useCountup } from '../../../hooks/useCountup'
 /**
  * TODO: 숫자가 변함에 따라 text의 크기가 변함 -> 같은 줄 (바로 옆)에 있는 텍스트가 영향을 받아 같이 흔들리는 효과가 발생
  * Try: 적당한 거리에 나머지 text들은 absolute 로 고정
+ * 
+ * Solved
  */
 interface Props {
     count: {

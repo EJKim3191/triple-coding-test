@@ -2,6 +2,8 @@ import React from 'react'
 import * as Styled from './style'
 import StatisticSection from '../../organisms/StatisticSection'
 import { useScrollY } from '../../../hooks/useScrollY';
+import bgImg from '../../../assets/img/img-01-bg.png';
+
 /**
  * 구현 해야하는 내용 외의 내용은 간단하게 표현하였습니다 (hardCoding)
  * 
@@ -20,7 +22,7 @@ import { useScrollY } from '../../../hooks/useScrollY';
  * Solved: animation-fill-mode:forwards 으로 처음 해당 값 opacity를 0으로 설정, 애니메이션 이후 값을 유지하게 끔 설정
  * 			delay 이전은 opacity가 0으로 렌더링이 되고, 딜레이 된 애니메이션이 실행 된 이후 마지막 값인 opacity 1 을 유지함
  */
-import bgImg from '../../../assets/img/img-01-bg.png';
+
 const commonStyle = {
 	height: '1000px',
 	position: 'relative',
@@ -55,20 +57,13 @@ const MainTemplate: React.FC = () => {
 	return (
 		<Styled.MainTemplate >
 			<Styled.SectionContainer style={{height: '860px', backgroundImage: `url(${bgImg})`, backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%'}}>
-				1
 			</Styled.SectionContainer >
             <Styled.SectionContainer style={{height: '552px'}}>
 					{scrollY && <StatisticSection />}
 			</Styled.SectionContainer>
-			<Styled.SectionContainer style={styles.gray_bg_1}>
-				2
-			</Styled.SectionContainer>
-			<Styled.SectionContainer style={styles.gray_bg_2}>
-				3
-			</Styled.SectionContainer>
-			<Styled.SectionContainer style={styles.gray_bg_1}>
-				4
-			</Styled.SectionContainer>
+			<Styled.SectionContainer style={styles.gray_bg_1} />
+			<Styled.SectionContainer style={styles.gray_bg_2} />
+			<Styled.SectionContainer style={styles.gray_bg_1} />
 		</Styled.MainTemplate>
 	)
 }
