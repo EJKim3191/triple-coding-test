@@ -8,7 +8,9 @@ interface Props {
 }
 
 function Text({ content, bold }: Props): React.ReactElement {
-    return <Styled.Text bold={bold}>{content}</Styled.Text>;
+
+    if(bold) return <Styled.StrongText>{content}</Styled.StrongText>;
+    else return <Styled.Text>{content}</Styled.Text>;
 }
 
 export default Text;
