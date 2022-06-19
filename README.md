@@ -70,6 +70,9 @@ npm run storybook
 - 적절한 위치에서 상태를 관리하는지 평가합니다.
     > atom은 stateless하고, molecules 와 organism, template에서 필요 state와 로직을 구현하였습니다.
 - 레이아웃을 구현하면서 적절한 마크업을 작성했는지 평가합니다.
+    > Styled-Component 특성 상, 사용 된 마크업은 style.ts에 정의되어있습니다.  
+    > atom의 Text에서, bold 부분은 Strong 으로 설정하였습니다.  
+    > 각 섹션은 article로 나누었습니다. 이때 `article vs section`을 고민하였는데, 각 `section`은 독립적으로 출판 될 수 있다 생각하였습니다.
 - 스타일을 잘 구현했는지 평가합니다.
     > CSS 스타일은 최대한 홈페이지를 참고하였고, 일부 수정 및 추가 하였습니다. 구현 내용은 `기록`에 기재하였습니다.
 - Javascript를 잘 활용했는지 평가합니다.
